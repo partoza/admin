@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to right, rgba(225, 0, 255, 0.781), rgba(140, 0, 255, 0.979)), url('back.gif');
+    background-size: cover;
+}
+
+  h1{
+    text-align: center;
+    color: white;
+    margin-top: 10%;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 100px;
+  }
+
+  #countdown{
+    margin-top: -10%;
+    text-align: center;
+    color: white;
+    font-family: "Shadows Into Light", cursive;
+    font-size: 500px;
+  }

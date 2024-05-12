@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assembly Programming</title>
+  <link rel="stylesheet" href="Timer.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <h1 id="topic">QUIZ REMAINING TIME</h1>
+    <p id="countdown">3:30</p>
+
+
+    <script>
+      var countdownTime = 10; // 3 minutes and 30 seconds
+
+            // Function to start the countdown
+            function startCountdown() {
+            var timerElement = document.getElementById("countdown");
+
+            // Update the countdown every second
+            var countdown = setInterval(function() {
+                // Calculate minutes and seconds
+                var minutes = Math.floor(countdownTime / 60);
+                var seconds = countdownTime % 60;
+
+                // Display the countdown
+                timerElement.textContent = minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0');
+
+                // Reduce countdown time
+                countdownTime--;
+
+                // Check if countdown is finished
+                if (countdownTime < 0) {
+                clearInterval(countdown);
+                timerElement.textContent = "Time's up!";
+                timerElement.style.fontSize = "400px"
+                }
+            }, 1000);
+            }
+
+            // Start the countdown when the page loads
+            window.onload = startCountdown;
+    </script>
+</body>
+</html>
